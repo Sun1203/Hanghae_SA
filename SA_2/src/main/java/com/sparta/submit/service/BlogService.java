@@ -24,9 +24,7 @@ public class BlogService {
 
     // 전체 게시글 조회
     public List<Blog> getBlogs() throws SQLException {
-        List<Blog> blogs = blogRepository.findAll();
-
-        return blogs;
+        return blogRepository.findByOrderByCreatedAtDesc();
     }
 
     public Blog createBlog(BlogRequestDto requestDto) throws SQLException {
