@@ -1,22 +1,7 @@
-# Tutorial 
+## Refresh를 사용하는 이유가 뭘까?
+- #### OTP 인증처럼 짧은 시간 동안에만 사용할 수 있도록 하고 주기적으로 재발급 받도록 하여 토큰이 유출되더라도 그 피해를 최소화 한다는 방식이다 단순히 Access Token만으로는 일일히 IP주소의 위치를파악해서 비교하는 게 아닌 이상 토큰의 탈취를 검증하기 어렵기 때문에 토큰이 탈취되더라도 그 피해를 줄이기 위해 토큰의 사용 시간 자체를 줄이는 것이다.
+## Access token 과 Refresh token 을 모두 재발급 할까요?
+- #### 보안상의 이유로 탈취되더라도 페이지가 이동하는 순간 새로운 Access token과 Refresh Token이 발급되기 때문에 탈취된 Access Token을 가지고 토큰을 재발급 받을 수 없다.
 
-인프런에 있는 [Spring Boot JWT Tutorial (정은구)](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-jwt#) 강의를 보고 따라한 프로젝트입니다.
-
-Refresh Token 로직을 추가하고 전체적으로 수정을 조금 했습니다.
-
-전체적인 정리글은 [여기](https://github.com/ParkJiwoon/PrivateStudy/blob/master/spring/spring-security.md) 에서 확인할 수 있습니다.
-
-<br>
-
-# Spring Initializr
-
-- Gradle
-- Java 11
-- Spring Boot 2.4.3
-- Jar
-- Dependency
-  - Spring Web
-  - Spring Security
-  - Spring Data JPA
-  - Lombok
-  - H2 Database
+## 처음 설계한 APi와 ERD에 변겅사항이 있었나요?
+- #### 처음에 ERD에 대한 이해와 각 테이블의 연관관계에 대한 이해도가 떨어져서 그냥 진행했었는데 하다보니깐 처음에 설계하는게 중요하구나 
