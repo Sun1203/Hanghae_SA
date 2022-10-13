@@ -1,6 +1,6 @@
 package com.sparta.submit.entity;
 
-import com.sparta.submit.dto.BlogRequestDto;
+import com.sparta.submit.dto.PostRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Getter // get 함수를 일괄적으로 만들어줍니다.
 @NoArgsConstructor // 기본 생성자를 만들어줍니다.
 @Entity // DB 테이블 역할을 합니다.
-public class Blog extends TimeStamped {
+public class Post extends TimeStamped {
 
     // ID가 자동으로 생성 및 증가합니다.
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,14 +32,14 @@ public class Blog extends TimeStamped {
     @Column(nullable = false)
     private String password;
 
-    public Blog(BlogRequestDto requestDto) {
+    public Post(PostRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
         this.password = requestDto.getPassword();
     }
 
-    public void update(BlogRequestDto requestDto) {
+    public void update(PostRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();

@@ -3,12 +3,11 @@ package com.sparta.submit.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
+
 @AllArgsConstructor
 @Getter
-public class BlogRequestDto {
+public class PostRequestDto {
 
     // ㅈㅔ목
     String title;
